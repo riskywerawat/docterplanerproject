@@ -1,0 +1,96 @@
+html,
+body{
+  margin: 0;
+  
+  padding: 0;
+  background-image: url('/assets/img/1per.jpg');
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+}
+header,
+.view {
+  height: 100vh;
+}
+
+.navbar
+{
+    background-color: transparent;
+}
+
+.navbar ul li a{
+    color: white;
+   
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
+h1 {
+  letter-spacing: 8px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 3px solid#213835;
+  width: 80px;
+}
+
+#login .container #login-row #login-column #login-box {
+  margin-top: 100px;
+  max-width: 600px;
+  height: auto;
+  right: 355px;
+  
+  background: inherit;
+  position: absolute;
+  overflow: hidden;
+}
+#login .container #login-row #login-column #login-box:before {
+  content: "";
+  width: 650px;
+  height: auto + 50px;
+  background: inherit;
+  position: absolute;
+  left: 100px;
+  right: 0;
+  top: -10px;
+  bottom: 0;
+}
+.btn {
+  background-color: #958064;
+  border: #958064;
+  color: white;
+  border-radius: 20px;
+}
+.btn:disabled {
+  background-color:#958064;
+  color: white;
+  border-radius: 20px;
+}
+.back-login {
+  color: #19e2b3;
+  text-decoration: none;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login
+  .container
+  #login-row
+  #login-column
+  #login-box
+  #login-form
+  #register-link {
+  margin-top: -85px;
+}
+
+.input-group-text {
+  background: #958064!important;
+  color: white !important;
+  border: 0 !important;
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}

@@ -1,0 +1,111 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<!--Coded with love by Mutiullah Samim-->
+<body>
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="assets/img/2631BF4D-D7CE-4944-800B-A4B6EB137B5A2.png" width="130" height="130" >
+					</div>
+        </div>
+        
+				<div class="d-flex justify-content-center form_container">
+					<form [formGroup]="angForm">
+            <ul class="list-group">
+            <li class=" d-flex justify-content-between align-items-center font-weight-bold">
+           ข้อมูลการติดต่อ
+           <span class="badge badge-light badge-pill">
+            <a href="/profile3" class="back-login">
+            <i class="fa fa-pencil-square-o" ></i></a>
+          </span>
+           </li>
+          </ul>
+          <hr class="style2">
+
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type = "text" 
+                 name = "email" 
+                 placeholder = "email" 
+                 formControlName="email" 
+                 class="form-control input_user" value=""
+            #email>
+            </div>
+            
+            <ul class="list-group">
+              <li class=" d-flex justify-content-between align-items-center font-weight-bold"> แผนก/สาขา
+              <span class="badge badge-light badge-pill">
+                <a href="/default4" class="back-login">
+                <i class="fa fa-pencil-square-o" ></i></a>
+              </span>
+            </li>
+          </ul>
+          <hr class="style2">
+
+          
+        <ul class="list-group">
+            <li class=" d-flex justify-content-between align-items-center font-weight-bold"> เอกสารประกอบการรับเวร
+            <span class="badge badge-light badge-pill">
+              <a href="/profile4" class="back-login">
+              <i class="fa fa-pencil-square-o" ></i></a>
+            </span>
+          </li>
+        </ul>
+        <p class="text-lowercase font-weight-lighter text-muted">*เพื่อการใช้งานแอพที่สมบูรณ์ กรุณาใส่ข้อมูลให้ครบถ้วน*</p>
+
+          <div *ngFor="let data of Data; let i=index">
+            <label >
+              <input type="checkbox" [value]="data.value" (change)="onCheckboxChange($event)" />
+              {{data.name}}
+            </label>
+          </div> 
+          <hr class="style2">
+          
+          <p class=" d-flex justify-content-between align-items-center font-weight-bold ">คะแนนที่ได้รับ</p>
+          <form [formGroup]="form">
+            <div class="cont">
+              <div class="stars">
+                <ngx-star-rating formControlName="rating1" [id]="'rating'"></ngx-star-rating>
+              </div>
+              <div>Rating: {{form.value.rating1}}</div>
+              <p>form is valid: {{ form.valid ? 'true' : 'false' }}</p>
+            </div>
+          </form>
+          <hr class="style2">
+
+          <a href="#" class="text-decoration-none">การติดตามสถานพยาบาล</a>
+          <hr class="style2">
+          
+          <a href="/profile5" class="text-decoration-none">การตั้งค่าบัญชี</a>
+					<hr class="style2">
+            
+							<div class="d-flex justify-content-center mt-3 login_container">
+				      	<input type = "submit" 
+                 value = "submit" 
+                 (click) = "onClickSubmit(email.value, password.value)" 
+                 class="btn login_btn">
+				      </div>
+					</form>
+				</div>
+		
+		
+			</div>
+		</div>
+	</div>
+</body>
+</html>

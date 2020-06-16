@@ -1,0 +1,260 @@
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+  <header>
+   <!--Navbar-->
+   <nav class="navbar navbar-expand-lg navStyle">
+    <div class="container-fluid">
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <div class="md-form my-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+    <!-- Full Page Intro -->
+   
+  <div id="login">
+    <div class="container">
+     
+      <div id="login-row" class="row justify-content-center align-items-center">
+        <div id="login-column" class="cols-sm-2">
+          <div id="login-box" class="col py-5 px-xl-3">
+            <div style="text-align: right;">
+              <br />
+              <img src="assets/img/โลโก2_1.png" width="100" height="100"  />
+      
+              </div>
+            <form
+              id="login-form"
+              class="form"
+              [formGroup]="myForm"
+              (ngSubmit)=" Onsummit()"
+            >
+              <h3 class="text-center font-weight-bolder" style="color: #000103;">Contact</h3>
+              
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-2 col-form-label font-weight-bold " style="color:  #c4c6c9;"> <br />Email</label>
+              <div class="col-md-10 ">
+                <br />
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"  id="inputGroupPrepend2"
+                      ><i class="fa fa-envelope-o fa-lg"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="validationDefaultUsername"
+                    aria-describedby="inputGroupPrepend2"
+                    placeholder="e-mail"
+                    formControlName="email"
+                    required
+                    [ngClass]="{
+                      'is-valid': email.valid && (email.dirty || email.touched),
+                      'is-invalid':
+                        email.invalid && (email.dirty || email.touched)
+                    }"
+                    autofocus
+                  />
+                  <div
+                    *ngIf="email.invalid && (email.dirty || email.touched)"
+                    class="invalid-feedback"
+                  >
+                    <p *ngIf="email.errors.required">
+                      email is required
+                    </p>
+                    <p *ngIf="email.errors.email">
+                      email is not pattern
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-2 col-form-label font-weight-bold " style="color: #c4c6c9;"> Phone</label>
+                <div class="col-md-10 ">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend2">
+                      <i class="fa fa-phone-square fa-lg"></i>
+                    </span>
+                    <input type="number" 
+                    class="form-control" 
+                    id="validationDefaultUsername" 
+                    aria-describedby="inputGroupPrepend2" 
+                    placeholder="Telephone number. "
+                    formControlName="numBer" 
+                    pattern="^((\\+91-?)|0)?[0-9]{9}$"
+                    required
+                    [ngClass]="{
+                      'is-valid':
+                      numBer.valid && (numBer.dirty || numBer.touched),
+                      'is-invalid':
+                      numBer.invalid && (numBer.dirty || numBer.touched)
+                    }"
+                  />
+                  <div
+                    *ngIf="
+                    numBer.invalid && (numBer.dirty || numBer.touched)
+                    "
+                    class="invalid-feedback"
+                  >
+                    <p *ngIf="numBer.errors.required">
+                      number is required
+                    </p>
+                    <p
+                      *ngIf="
+                      numBer.errors.minlength || numBer.errors.pattern
+                      "
+                    >
+                      number must have at least 10 characters (number Only)
+                    </p>
+                  </div>
+                   </div>
+                  </div>
+                </div>
+
+                  
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-2 col-form-label font-weight-bold " style="color:#c4c6c9;"> Line</label>
+                  <div class="col-md-10">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend2">
+                        <i class="fa fa-commenting "></i>
+                      </span>
+                      <input type="lineid" 
+                      class="form-control" 
+                      id="validationDefaultUsername" 
+                      aria-describedby="inputGroupPrepend2" 
+                      placeholder="Line Id. "
+                      formControlName="lineId" 
+                      pattern="^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]+$"
+                      required
+                      [ngClass]="{
+                        'is-valid':
+                        lineId.valid && (lineId.dirty || lineId.touched),
+                        'is-invalid':
+                        lineId.invalid && (lineId.dirty || lineId.touched)
+                      }"
+                    />
+                    <div
+                      *ngIf="
+                      lineId.invalid && (lineId.dirty || lineId.touched)
+                      "
+                      class="invalid-feedback"
+                    >
+                      <p *ngIf="lineId.errors.required">
+                        line-id is required
+                      </p>
+                      <p
+                        *ngIf="
+                        lineId.errors.minlength || lineId.errors.pattern
+                        "
+                      >
+                        line-id must have at least 6 characters 
+                      </p>
+                    </div>
+                     </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-2 col-form-label font-weight-bold " style="color:#c4c6c9;"> Optional</label>
+
+                    <div class="col-md-10">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend2">
+                          <i class="fa fa-location-arrow fa-lg"></i>
+                        </span>
+                        <input type="optional" 
+                        class="form-control" 
+                        id="validationDefaultUsername" 
+                        aria-describedby="inputGroupPrepend2" 
+                        placeholder="Optional. "
+                        formControlName="optioNal" 
+                        pattern="^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ ]+$"
+                        required
+                        [ngClass]="{
+                          'is-valid':
+                          optioNal.valid && (optioNal.dirty || optioNal.touched),
+                          'is-invalid':
+                          optioNal.invalid && (optioNal.dirty || optioNal.touched)
+                        }"
+                      />
+                      <div
+                        *ngIf="
+                        optioNal.invalid && (optioNal.dirty || optioNal.touched)
+                        "
+                        class="invalid-feedback"
+                      >
+                        <p *ngIf="optioNal.errors.required">
+                          optional is required
+                        </p>
+                        
+                      </div>
+                       </div>
+                      </div>
+                    </div>
+
+                  
+
+
+
+
+
+
+              <div class="col-lg-4 offset-lg-4 ">
+                <br />
+
+                <div
+                  class="from-group "
+                  style="text-align: center;margin-top: 10%;"
+                >
+                  <button
+                    class="btn btn-md form-control rounded-lg font-weight-bold"
+                    [disabled]="this.myForm.status == 'INVALID'"
+                  >
+                    DONE
+                  </button>
+                </div>
+              </div>
+
+             
+            </form>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+
+</div>
+
+<!-- Full Page Intro -->
+</header>
+</body>

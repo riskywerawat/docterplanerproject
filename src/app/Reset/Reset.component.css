@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/img/forgot2.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  #login .container #login-row #login-column #login-box {
+    margin-top: 325px;
+    max-width: 600px;
+    height: auto;
+    left: 170px;
+    background: inherit;
+    position: absolute;
+    overflow: hidden;
+  }
+  #login .container #login-row #login-column #login-box:before {
+    content: "";
+    width: 650px;
+    height: auto + 50px;
+    background: inherit;
+    position: absolute;
+    left: 150px;
+    right: 0;
+    top: -50px;
+    bottom: 0;
+  }
+  .btn {
+    background-color: #68d1c1;
+    border: #17a2b8;
+    color: white;
+    border-radius: 20px;
+  }
+  .btn:disabled {
+    background-color:   #a9efe5;;
+    color: white;
+    border-radius: 20px;
+  }
+  .back-login {
+    color: #19e2b3;
+    text-decoration: none;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login
+    .container
+    #login-row
+    #login-column
+    #login-box
+    #login-form
+    #register-link {
+    margin-top: -85px;
+  }
+  .input-group-text {
+    background:  #a9efe5 !important;
+    color: white !important;
+    border: 2 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+#login2 .container #login2-row #login2-column #login2-box {
+  margin-top: 90px;
+  max-width: 600px;
+  height: auto;
+  right: -170px;
+  
+  background: inherit;
+  position: absolute;
+  overflow: hidden;
+}
+#login2 .container #login2-row #login2-column #login2-box:before {
+  content: "";
+  width: 650px;
+  height: auto + 50px;
+  background: inherit;
+  position: absolute;
+  
+  right: -170px;
+  top: -50px;
+  bottom: 0;
+}
+#login2
+    .container
+    #login2-row
+    #login2-column
+    #login2-box
+    #login2-form
+    #register-link {
+    margin-top: -85px;
+  }

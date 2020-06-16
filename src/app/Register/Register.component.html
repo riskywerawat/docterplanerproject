@@ -1,0 +1,220 @@
+<html lang="en">
+    <body>
+
+        <header>
+          <!--Navbar-->
+          <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navStyle">
+    <div class="container-fluid">
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+        <img src="assets/img/โลโก2_1.png"  width="50" height="50" class="d-inline-block align-top" alt="" />
+      <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="/profile">Profile</a>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <div class="md-form my-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </div>
+      </form>
+      </div>
+    </div>
+    </nav>
+          <!-- Navbar -->
+         
+            <!-- Mask & flexbox options-->
+            <div id="login">
+              <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                  <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                     <form
+                        id="login-form"
+                        class="form"
+                        [formGroup]="myForm"
+                        (ngSubmit)="Onsummit()"
+                      >
+                      <!--<h3 class="text-center text-uppercase font-weight-bold " >Sign Up</h3>-->
+                        <div class="col-md-12 ">
+                          <br />
+                          <p class="text-uppercase font-weight-bold" style="color: #958064;">E-MAIL.</p>
+                          
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend2"
+                                ><i class="fa fa-envelope-o"></i
+                              ></span>
+                            </div>
+                            <input
+                              type="email"
+                              class="form-control"
+                              id="validationDefaultUsername"
+                              aria-describedby="inputGroupPrepend2"
+                              placeholder="Username"
+                              formControlName="email"
+                              required
+                              [ngClass]="{
+                                'is-valid': email.valid && (email.dirty || email.touched),
+                                'is-invalid':
+                                  email.invalid && (email.dirty || email.touched)
+                              }"
+                            />
+                            <div
+                              *ngIf="email.invalid && (email.dirty || email.touched)"
+                              class="invalid-feedback"
+                            >
+                              <p *ngIf="email.errors.required" style="color: #958064;">
+                                email is required
+                              </p>
+                              <p *ngIf="email.errors.email" style="color: #958064;">
+                                email is not pattern
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <i class="fa fa-lock"></i> -->
+                        <div class="col-md-12 ">
+                          <br />
+                          <p class="text-uppercase font-weight-bold" style="color: #958064;">PASSWORD.</p>
+                          
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend2"
+                                ><i class="fa fa-lock"></i
+                              ></span>
+                            </div>
+                            <input
+                              type="password"
+                              class="form-control"
+                              id="validationDefaultUsername"
+                              aria-describedby="inputGroupPrepend2"
+                              placeholder="passWord"
+                              formControlName="passWord"
+                              pattern="[a-zA-Z ]*"
+                              required
+                              [ngClass]="{
+                                'is-valid':
+                                  passWord.valid && (passWord.dirty || passWord.touched),
+                                'is-invalid':
+                                  passWord.invalid && (passWord.dirty || passWord.touched)
+                              }"
+                            />
+                            <div
+                              *ngIf="
+                                passWord.invalid && (passWord.dirty || passWord.touched)
+                              "
+                              class="invalid-feedback"
+                            >
+                              <p *ngIf="passWord.errors.required" style="color: #958064;">
+                                passWord is required
+                              </p>
+                              <p
+                                *ngIf="passWord.errors.minlength || passWord.errors.pattern"
+                                style="color: #958064;">
+                                password must have at least 6 characters (English Only)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="col-md-12 ">
+                          <br />
+                          <p class="text-uppercase font-weight-bold" style="color: #958064;">CONFIRM PASSWORD.</p>
+                          
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend2"
+                                ><i class="fa fa-lock"></i
+                              ></span>
+                            </div>
+                            <input
+                              type="password"
+                              class="form-control"
+                              id="validationDefaultUsername"
+                              aria-describedby="inputGroupPrepend2"
+                              placeholder="confirm Password"
+                              formControlName="confirm_Password"
+                              required
+                              [ngClass]="{
+                                'is-valid':
+                                  confirm_Password.valid &&
+                                  (confirm_Password.dirty || confirm_Password.touched),
+                                'is-invalid':
+                                  confirm_Password.invalid &&
+                                  (confirm_Password.dirty || confirm_Password.touched)
+                              }"
+                            />
+                            <div
+                              *ngIf="
+                                confirm_Password.invalid &&
+                                (confirm_Password.dirty || confirm_Password.touched)
+                              "
+                              class="invalid-feedback"
+                            >
+                              <p *ngIf="confirm_Password.errors.required" style="color: #958064;">
+                                confirm Password is required
+                              </p>
+                              <p *ngIf="confirm_Password.errors.MatchPassword" style="color: #958064;">
+                                confirm Password is not match
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            class="from-group "
+                            style="text-align: center;margin-top: 10%;"
+                          >
+                            <button
+                              class="btn form-control"
+                              [disabled]="this.myForm.status == 'INVALID'"
+                            >
+                              Sign Up
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-md-12 " style="text-align: center; color: #f7f3f8;">
+                          <br />
+          
+                          By tapping Sign up,you have agreed to
+                          <p>
+                            Our
+                            <a
+                              href="/terms"
+                              style="color: #958064;"
+                              routerLinkActive="active"
+                            >
+                              Terms of use</a
+                            >
+                            and
+                            <a
+                              href="/privacy"
+                              style="color: #958064;"
+                              routerLinkActive="active"
+                             
+                            >
+                              Privacy Policy</a
+                            >
+                          </p>
+                                   
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Mask & flexbox options-->
+          
+        </header>
+        <!-- Main navigation -->
+        
+
+    </body>
+</html>

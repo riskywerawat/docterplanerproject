@@ -1,0 +1,127 @@
+.checkout-wrapper{padding-top: 40px; padding-bottom:40px; background-color:inherit;}
+.checkout{    background-color:inherit;
+   /* border:1px solid #f39c12;*/
+     
+    font-size: 14px;}
+.panel{margin-bottom: 0px;}
+.checkout-step {
+     
+    border-top: 1px solid #504b71;
+    color: #666;
+    font-size: 14px;
+    padding: 30px;
+    position: relative;
+}
+
+.checkout-step-number {
+    border-radius: 50%;
+    border: 1px solid #666;
+    display: inline-block;
+    font-size: 12px;
+    height: 32px;
+    margin-right: 26px;
+    padding: 6px;
+    text-align: center;
+    width: 32px;
+}
+.checkout-step-title{ font-size: 18px;
+    font-weight: 500;
+    vertical-align: middle;display: inline-block; margin: 0px;
+     }
+ 
+.checout-address-step .form-group{margin-bottom: 18px;display: inline-block;
+    width: 100%;}
+
+.checkout-step-body{padding-left: 60px; padding-top: 10px;}
+
+.checkout-step-active{display: block;}
+.checkout-step-disabled{display: none;}
+
+
+.login-phone{display: inline-block;}
+.login-phone:after {
+    content: '+91 - ';
+    font-size: 14px;
+    left: 36px;
+}
+.login-phone:before {
+    content: "";
+    font-style: normal;
+    color: #333;
+    font-size: 18px;
+    left: 12px;
+        display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.login-phone:after, .login-phone:before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.login-phone .form-control {
+    padding-left: 68px;
+    font-size: 14px;
+    
+}
+
+
+/*พวกพื้นหลัง*/
+    
+    /* Coded with love by Mutiullah Samim */
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 120vh;
+        background-image: url('/assets/img/1ตั้งค่าบัญชี1.jpg');
+        background-size: cover;
+        background-repeat: repeat;
+    }
+    .user_card {
+        height: auto;
+        width: 550px;
+        margin-top: 140px;
+        margin-bottom: auto;
+        /*background: #f39c12;*/
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+       
+
+    }
+    
+  
+    .navbar
+    {
+        background-color: #050505;
+    }
+    
+    .navbar ul li a{
+        color: white;
+       
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    .btn {
+        background-color: #504b71;
+        border: #b5b6b9;
+        color: #f2eff7;
+        border-radius: 20px;
+      }
+      .btn:disabled {
+        background-color: #504b71;
+        color: #f2eff7;
+        border-radius: 20px;
+      }
+      hr.style1{
+        border-top: 1px solid #8c8b8b;
+    }
+    

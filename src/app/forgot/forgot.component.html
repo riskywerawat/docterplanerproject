@@ -1,0 +1,116 @@
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+  <div id="login" >
+    <div class="container">
+      <div id="login-row" class="row  align-items-start ">
+        <div id="login-column" class="cols-sm-6">
+          <div id="login-box" class="col py-5 px-xl-1">
+           <!-- <div class="col-md-12" style="  margin-top: 10px;">
+              <a href="" class="back-login"
+                ><i class="fa fa-arrow-left"></i> LOGIN</a
+              >
+            </div>-->
+            <form
+              id="login-form"
+              class="form "
+              [formGroup]="myForm"
+              (ngSubmit)="summit()"
+            >
+              
+              <div class="col-md-12 " style="text-align: justify; color: #a9efe5;">
+                
+                <h3 class="text " style="color: #5aaefb;">Forgot Password</h3>
+               Enter the email address associate with your account,and we'll email you a password.
+                              
+              </div>
+              <div class="col-md-12 ">
+                <br />
+                <div class="input-group shadow" >
+                  <div class="input-group-prepend "  >
+                    <span class="input-group-text" id="inputGroupPrepend2"  style="color: white;"
+                      ><i class="fa fa-envelope-o"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="validationDefaultUsername"
+                    aria-describedby="inputGroupPrepend2"
+                    placeholder="Email" 
+                    formControlName="email"
+                    required
+                    [ngClass]="{
+                      'is-valid': email.valid && (email.dirty || email.touched),
+                      'is-invalid':
+                        email.invalid && (email.dirty || email.touched)
+                    }"
+                    autofocus
+                  />
+                  <div
+                    *ngIf="email.invalid && (email.dirty || email.touched)"
+                    class="invalid-feedback"
+                  >
+                    <p *ngIf="email.errors.required">
+                      email is required
+                    </p>
+                    <p *ngIf="email.errors.email">
+                      email is not pattern
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- <i class="fa fa-lock"></i> -->
+              
+
+              <div class=" col-lg-4 offset-lg-4">
+                <br />
+
+                
+                <div
+                  class="from-group "
+                  style="text-align: center;margin-top: 10%;"
+                >
+                  <button
+                    class="btn btn-lg form-control rounded-lg font-weight-bold "
+                    [disabled]="this.myForm.status == 'INVALID'"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+
+             
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login2">
+    <div class="container">
+      <div id="login2-row" class="row justify-content-center align-items-center">
+        <div id="login2-column" class="cols-sm-2">
+          <div id="login2-box" class="col py-5 px-xl-3">
+            <nav class="nav navbar navbar-expand-lg" >
+              <a class="nav-link active font-weight-bolder" href="/home" style="text-align: justify; color: #93a9a4;">Home</a>
+              <a class="nav-link active font-weight-bolder" href="/login" style="text-align: justify; color: #93a9a4;">Log in</a>
+              <a class="nav-link active font-weight-bolder" href="/profile" style="text-align: justify; color: #93a9a4;">Profile</a>
+              <!--<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>

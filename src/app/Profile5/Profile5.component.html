@@ -1,0 +1,335 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+    
+ <!--Navbar-->
+ <nav class="navbar navbar-expand-lg navStyle">
+  <div class="container-fluid">
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+      <a class="nav-link" href="/login">Login</a>
+      </li>
+      <li class="nav-item active">
+      <a class="nav-link" href="/profile">Profile</a>
+      </li>
+    </ul>
+    <form class="form-inline">
+      <div class="md-form my-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      </div>
+    </form>
+    </div>
+  </div>
+  </nav>
+        <!-- Navbar -->
+<!--Coded with love by Mutiullah Samim-->
+<body>
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<!--<div class="d-flex justify-content-center">
+					
+					<img src="assets/img/โลโก2_1.png" width="100" height="100"  />
+					
+        </div>-->
+        
+<div class="container">
+	<div class="row">
+	<div class="col">
+    <h3 class="text-center " style="color: #504b71;">การตั้งค่าบัญชี</h3>
+    <br>
+                    <div id="accordion" class="checkout rounded-lg">
+                        <div class="panel checkout-step">
+                            <div> <span class="checkout-step-number">1</span>
+                                <h4 class="checkout-step-title" > <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="color: #f00078;" > การเชื่อมต่อ facebook</a></h4>
+                            </div>
+                            <div id="collapseOne" class="collapse in">
+                                <div class="checkout-step-body">
+                                    <p>You want to connect to Facebook.</p>
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="checkout-login">
+                                                <form>
+                                                      <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                        <label class="custom-control-label" for="customSwitch1" (click)="showModal2()"></label>
+                                                     
+                                                        <a class="collapsed btn btn-dark" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Next</a>
+                                                      </div>
+                                                </form>
+                                            </div>
+                                            <!-- /input-group -->
+                                        </div>
+                                        <!-- /.col-lg-6 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="panel checkout-step">
+                            <div role="tab" id="headingTwo"> <span class="checkout-step-number">2</span>
+                                <h4 class="checkout-step-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" style="color: #f00078;">เปลี่ยนแปลงรหัสผ่าน </a> </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="checkout-step-body">
+                                    <div class="checout-address-step">
+                                        <div class="row">
+                                           
+                                              <form
+                                              id="login-form"
+                                              class="form"
+                                              [formGroup]="myForm"
+                                              (ngSubmit)="Onsummit()"
+                                            >
+                                              
+                                              <div class="col-md-12 ">
+                                                <br />
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroupPrepend2"
+                                                      ><i class="fa fa-lock"></i
+                                                    ></span>
+                                                  </div>
+                                                  <input
+                                                    type="newpass"
+                                                    class="form-control"
+                                                    id="validationDefaultUsername"
+                                                    aria-describedby="inputGroupPrepend2"
+                                                    placeholder="New Password"
+                                                    formControlName="newPass"
+                                                    pattern="[a-zA-Z ]*"
+                                                    required
+                                                    [ngClass]="{
+                                                      'is-valid': newPass.valid && (newPass.dirty || newPass.touched),
+                                                      'is-invalid':
+                                                      newPass.invalid && (newPass.dirty || newPass.touched)
+                                                    }"
+                                                  />
+                                                  <div
+                                                    *ngIf="newPass.invalid && (newPass.dirty || newPass.touched)"
+                                                    class="invalid-feedback"
+                                                  >
+                                                    <p *ngIf="newPass.errors.required">
+                                                      password is required
+                                                    </p>
+                                                    <p *ngIf="email.errors.email">
+                                                      password is not pattern
+                                                    </p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <!-- <i class="fa fa-lock"></i> -->
+                                              <div class="col-md-12 ">
+                                                <br />
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroupPrepend2"
+                                                      ><i class="fa fa-lock"></i
+                                                    ></span>
+                                                  </div>
+                                                  <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    id="validationDefaultUsername"
+                                                    aria-describedby="inputGroupPrepend2"
+                                                    placeholder="passWord"
+                                                    formControlName="passWord"
+                                                    pattern="[a-zA-Z ]*"
+                                                    required
+                                                    [ngClass]="{
+                                                      'is-valid':
+                                                        passWord.valid && (passWord.dirty || passWord.touched),
+                                                      'is-invalid':
+                                                        passWord.invalid && (passWord.dirty || passWord.touched)
+                                                    }"
+                                                  />
+                                                  <div
+                                                    *ngIf="
+                                                      passWord.invalid && (passWord.dirty || passWord.touched)
+                                                    "
+                                                    class="invalid-feedback"
+                                                  >
+                                                    <p *ngIf="passWord.errors.required">
+                                                      passWord is required
+                                                    </p>
+                                                    <p
+                                                      *ngIf="
+                                                        passWord.errors.minlength || passWord.errors.pattern
+                                                      "
+                                                    >
+                                                      password must have at least 6 characters (English Only)
+                                                    </p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                
+                                              <div class="col-md-12 ">
+                                                <br />
+                                                <div class="input-group">
+                                                  <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroupPrepend2"
+                                                      ><i class="fa fa-lock"></i
+                                                    ></span>
+                                                  </div>
+                                                  <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    id="validationDefaultUsername"
+                                                    aria-describedby="inputGroupPrepend2"
+                                                    placeholder="confirm Password"
+                                                    formControlName="confirm_Password"
+                                                    required
+                                                    [ngClass]="{
+                                                      'is-valid':
+                                                        confirm_Password.valid &&
+                                                        (confirm_Password.dirty || confirm_Password.touched),
+                                                      'is-invalid':
+                                                        confirm_Password.invalid &&
+                                                        (confirm_Password.dirty || confirm_Password.touched)
+                                                    }"
+                                                  />
+                                                  <div
+                                                    *ngIf="
+                                                      confirm_Password.invalid &&
+                                                      (confirm_Password.dirty || confirm_Password.touched)
+                                                    "
+                                                    class="invalid-feedback"
+                                                  >
+                                                    <p *ngIf="confirm_Password.errors.required">
+                                                      confirm Password is required
+                                                    </p>
+                                                    <p *ngIf="confirm_Password.errors.MatchPassword">
+                                                      confirm Password is not match
+                                                    </p>
+                                                  </div>
+                                                </div>
+                                               <!-- <div class="col-md-12 " style="text-align: center; color: white;">
+                                                  <br />
+                                  
+                                                  Password must have at least 6 characters (English only)
+                                                  
+                                                           
+                                                </div>-->
+                                                
+                                                <div class="from-group " style="text-align: center;margin-top: 10%;">
+                                                  <div class="col-md-12">
+                                                  <button
+                                                    class="btn form-control  btn-primary"
+                                                    [disabled]="this.myForm.status == 'INVALID'"
+                                                    id="singlebutton" name="singlebutton"
+                                                  >
+                                                  Save
+                                                  </button>
+                                                </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                           </div>
+                                    </div>
+                                    <br />
+                                    <div class="col-md-12">
+                                    <a class="collapsed btn btn-dark" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> Next </a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="panel checkout-step">
+                            <div role="tab" id="headingThree"> <span class="checkout-step-number">3</span>
+                                <h4 class="checkout-step-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" style="color: #f00078;" >ระบบแจ้งเตือน</a> </h4>
+                            </div>
+                            <div id="collapseThree" class="collapse in">
+                                <div class="checkout-step-body">
+                                   
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="checkout-login">
+                                                <form>
+                                                      <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                                        <label class="custom-control-label" for="customSwitch2">แจ้งเตือนการอัพเดทงานที่่เกี่ยวข้อง,งานที่กำลังจะถึง</label>
+                                                      </div>
+                                                      <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                                        <label class="custom-control-label" for="customSwitch3">แจ้งเตือนงานที่เสร็จแล้ว</label>
+                                                      </div>
+                                                      <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                                        <label class="custom-control-label" for="customSwitch4">แจ้งเตือนโรงพยาบาลที่คุณจะสนใจ</label>
+                                                      </div>
+                                                      
+                                                </form>
+                                            </div>
+                                            <!-- /input-group 
+                                           <a class="collapsed btn btn-dark" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Next</a>-->
+                                        </div>
+                                       </div>
+                                      </div>
+                            </div>
+                        </div>
+
+                        
+                        <!--<div class="panel checkout-step">
+                            <div role="tab" id="headingFour"> <span class="checkout-step-number">4</span>
+                                <h4 class="checkout-step-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" > 
+                                 Terms of Use / Privacy Policy</a> </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <div class="checkout-step-body">
+                                  <a href="/terms" class="btn btn-default">Terms of Use</a> /
+                                  <a href="/privacy" class="btn btn-default"> Privacy Policy</a>
+                                </div>
+                            </div>
+                        </div>-->
+<hr class="style1">
+                        <div class="text-center ">
+                          <a href="/terms" style="color: #f00078;">Terms of Use</a> OR <a href="/privacy" style="color: #f00078;"> Privacy Policy</a>
+                        </div>
+                        
+
+                    </div>
+                </div>
+	</div>
+</div>
+<br>
+<div class="col-lg-4 offset-lg-4 ">
+  <div class="from-group " style="text-align: center;margin-top: 5%;">
+    
+    <button
+      class="btn form-control rounded "
+      (click)="showModal()"
+    >
+    ออกจากระบบ
+    </button>
+  </div>
+  </div>
+
+
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

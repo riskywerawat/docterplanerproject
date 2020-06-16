@@ -1,0 +1,80 @@
+<link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+
+<html lang="en">
+<body>
+    <header>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navStyle">
+        <div class="container-fluid">
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/profile">Profile</a>
+              </li>
+            </ul>
+            <form class="form-inline">
+              <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+
+            <form #form='ngForm' (ngSubmit)="onSubmit(form)">
+              <div id="login">
+                <div class="container ">
+                  <div id="login-row" class="row justify-content-center align-items-center">  
+                    <div id="login-column" class="col-12">
+                      <div id="login-box" class="col-12">   
+                        <img src="assets/img/โลโก2_1.png"  width="150" height="150"  />
+                        <br /> 
+                          
+                        
+                        <div class="card w-100">
+                         <div class="card-body"> 
+                          <div id="multiselect-sample" class="control-section ">
+                          <div id='content'>
+                              <div class="control-styles">
+                                  <h4>แผนก/สาขา</h4>
+                                  <ejs-multiselect id='localData' name='name'  #local='ngModel' [(value)]='value'[(ngModel)]='value' [dataSource]='countries' 
+                              [fields]='localFields' [placeholder]='localWaterMark' ></ejs-multiselect>
+                              <br />
+                              <button type="submit" ejs-button class="btn" >Submit</button>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                       </div>
+                      </div> 
+                   </div>
+                </div>  
+               </div>
+              </div>
+            </form>
+            <!-- Form ends -->
+          
+
+           
+
+</header>
+ 
+</body>
+</html>
